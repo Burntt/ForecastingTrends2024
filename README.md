@@ -53,7 +53,7 @@ This project is under the MIT License. See the LICENSE file for more details.
    - Use `docker run` with appropriate flags and arguments to start your training loop. For GPUs, add `--gpus all`.
    - Include all necessary arguments for your script, as specified in the `argparse` setup.
 
-Example Command:
+Example Command for Running the Docker Container:
 ```shell
 sudo docker run -it --gpus all your-image-name \
           --experiment_name your_experiment \
