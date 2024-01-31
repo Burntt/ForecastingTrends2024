@@ -1,0 +1,41 @@
+# kubectl describe pod/elasticwine-default-0-classifier-8445c9755c-5wlpw -n seldon
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: minios3-secret
+  namespace: inf-informer
+type: Opaque
+stringData:
+  RCLONE_CONFIG_S3_TYPE: s3
+  RCLONE_CONFIG_S3_PROVIDER: Minio
+  RCLONE_CONFIG_S3_ACCESS_KEY_ID: YOUR_ACCESS_KEY_ID
+  RCLONE_CONFIG_S3_SECRET_ACCESS_KEY: YOUR_SECRET_ACCESS_KEY
+  RCLONE_CONFIG_S3_ENDPOINT: http://YOUR_S3_ENDPOINT
+  RCLONE_CONFIG_S3_ENV_AUTH: "false"
+
+
+---
+
+apiVersion: machinelearning.seldon.io/v1alpha2
+kind: SeldonDeployment
+metadata:
+  name: informer-triton
+  namespace: inf-informer
+spec:
+  name: informer-triton
+  protocol: kfserving
+  predictors:
+    - graph:
+        children: []
+        implementation: TRITON_SERVER
+        
+        ### PICK MLFLOW MODEL
+        modelUri: s3://mlflow-artifacts/3/1d29d6650a9a4512afe51a9dc2e14365/artifacts/triton
+        ### PICK MLFLOW MODEL
+
+
+        envSecretRefName: minios3-secret
+        name: informer-triton
+      name: default
+      replicas: 1
