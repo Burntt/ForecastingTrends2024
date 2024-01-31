@@ -1,3 +1,5 @@
+![image](https://github.com/Burntt/Forecasting_Trends_2024/assets/69801109/42423542-1ea6-4a9e-b08b-f53dcc6a88ee)
+
 # Forecasting Trends in Cloud-Edge Computing with Informer
 
 ## Overview
