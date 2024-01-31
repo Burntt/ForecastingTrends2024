@@ -10,14 +10,8 @@ This repository is dedicated to the Informer model, a cutting-edge approach desi
 - **Tailored for Cloud-Edge**: Specifically designed for the dynamics of cloud and edge computing environments, ensuring relevance and applicability.
 - **Efficient and Scalable**: Built to accommodate large datasets and complex computations with high efficiency.
 
-## Contributing
-Contributions are encouraged! Enhance the project through pull requests, or suggest features and report issues.
-
 ## License
 This project is under the MIT License. See the LICENSE file for more details.
-
-## Acknowledgments
-We extend our gratitude to the authors and contributors of the original Informer GitHub repository for their foundational work, which facilitated the rapid adaptation and implementation of their code into our project. Their innovative approach to long sequence time-series forecasting has been instrumental in guiding our research direction.
 
 ## Citations
 ```
@@ -126,3 +120,6 @@ sudo docker run -it --gpus all your-image-name \
 6. **Optional Prediction**: 
    - If your script supports prediction on unseen data (`--do_predict`), execute the `predict` method.
    - Review prediction outcomes for further analysis or application.
+
+## Acknowledgments
+We extend our gratitude to the authors and contributors of the original Informer GitHub repository for their foundational work, which facilitated the rapid adaptation and implementation of their code into our project. Their innovative approach to long sequence time-series forecasting has been instrumental in guiding our research direction.
